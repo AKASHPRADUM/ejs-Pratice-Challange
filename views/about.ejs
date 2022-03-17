@@ -1,7 +1,14 @@
 <%- include('partials/header'); -%>
 
-<h1>About</h1>
-<p><%= aboutContents %></p>
+<!-- <h1>About</h1> -->
+<% aboutContents.forEach((element)=>{ %>
+    <h1>
+        <%= element.name %>
+    </h1>
+    <p><%= element.content %></p>
+
+    <% }) %>
+
 
 
 <%- include('partials/footer'); -%>

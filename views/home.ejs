@@ -1,25 +1,20 @@
 <%- include('partials/header'); -%>
 
-    <h1>Home</h1>
-    <p>
-        <%= homeContent %>
-    </p>
-
 
     <% postdata.forEach((element)=>{ %>
         <h1>
-            <%= element.PostTitle %>
+            <%= element.name %>
         </h1>
-        <% if (element.PostData.length> 100) { %>
-            <% var string=element.PostData.substring(0, 99) + "..." ; %>
+        <% if (element.content.length> 100) { %>
+            <% var string=element.content.substring(0, 99) + "..." ; %>
                 <p>
                     <%= string %>
-                    <a href="/post/<%= element.PostTitle%>">Read More</a>
+                    <a href="/post/<%= element.name %>">Read More</a>
                 </p>
                 
         <% } else{ %>
             <p>
-                <%= element.PostData %>
+                <%= element.content %>
             </p>
         <% } %>
     <% }) %>

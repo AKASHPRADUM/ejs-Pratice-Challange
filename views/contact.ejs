@@ -1,10 +1,12 @@
 <%- include('partials/header'); -%>
 
-<h1>Contact</h1>
-<p><%= contactContents %></p>
+<% contactContents.forEach((element)=>{ %>
+    <h1>
+        <%= element.name %>
+    </h1>
+    <p><%= element.content %></p>
 
-
-
+    <% }) %>
 
 
 <%- include('partials/footer'); -%>
